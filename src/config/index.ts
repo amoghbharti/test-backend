@@ -6,3 +6,5 @@ export const MONGO_DB_CONF = {
   DB_PASSWORD: envs.MONGO_DB_PASSWORD,
   DB_HOST: envs.MONGO_DB_HOST,
 };
+
+export const CORS_CONF = {};
