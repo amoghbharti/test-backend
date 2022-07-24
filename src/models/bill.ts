@@ -7,4 +7,4 @@ const billSchema = new mongoose.Schema({
   amount: { type: Number, require: true },
 });
 
-export default mongoose.model('User', billSchema);
+export default mongoose.model('bill', billSchema);

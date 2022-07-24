@@ -1,5 +1,6 @@
 import express from 'express';
 import routes from './routes';
+import connection from './connection';
 
 class App {
   public server;
@@ -9,6 +10,7 @@ class App {
 
     this.middleware();
     this.routes();
+    this.connectDB();
   }
 
   middleware() {
@@ -16,6 +18,9 @@ class App {
   }
   routes() {
     this.server.use(routes);
+  }
+  async connectDB() {
+    await connection();
   }
 }
 
